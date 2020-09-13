@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <title>{% block title %}{{ SITENAME }}{%endblock%}</title>
+        <meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="shortcut icon" href="/theme/images/logo-notext.png"/>
+        <meta name="theme-color" content="176093">
+
+        <link rel="stylesheet" href="{{ SITEURL }}/theme/css/{{ CSS_FILE }}" type="text/css" />
+        {% if FEED_ALL_ATOM %}
+        <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_ATOM }}" type="application/atom+xml" rel="alternate" title="{{ SITENAME }} Atom Feed" />
+        {% endif %}
+        {% if FEED_ALL_RSS %}
+        <link href="{{ FEED_DOMAIN }}/{{ FEED_ALL_RSS }}" type="application/rss+xml" rel="alternate" title="{{ SITENAME }} RSS Feed" />
+        {% endif %}
+
+        <!--[if lte IE 7]>
+                <link rel="stylesheet" type="text/css" media="all" href="{{ SITEURL }}/css/ie.css"/>
+                <script src="{{ SITEURL }}/js/IE8.js" type="text/javascript"></script><![endif]-->
+
+        <!--[if lt IE 7]>
+                <link rel="stylesheet" type="text/css" media="all" href="{{ SITEURL }}/css/ie6.css"/><![endif]-->
+
+
+</head>
+
+<body id="index" class="home">
+{% include 'github.html' %}
+        <div class="LaunchyardDetail">
+                <p>
+                        <a href="{{ SITEURL }}"></a>
+                        <img src="/theme/images/logo-art/logo.svg" width="200" height="200" alt="PBRB logo">
+                        <br>
+                        Push Button Receive Bacon Clan Community Site
+                        <br>
+                        <a href="/index.html" >Blog &rarr;</a>
+                        <br>
+                        <a href="/category/video.html" >Videos &rarr;</a>
+                        <br>
+                        <a href="/category/server.html" >Servers &rarr;</a>
+                        <br>
+                        <a href="/category/content-pack.html" >Content Packs &rarr;</a>
+                        <br>
+                        <a href="/pages/events.html" >Events &rarr;</a>
+                        <br>
+                        <a href="https://steamcommunity.com/groups/PBRBgaming"><img src="/theme/images/numix/steam.png" width="35" height="35"/>
+                        <a href="https://twitter.com/PBRB_gaming"><img src="/theme/images/numix/web-twitter.png" width="35" height="35"/>
+                        <a href="https://www.facebook.com/PBRBgaming"><img src="/theme/images/numix/web-facebook.png" width="35" height="35"/>
+                        <a href="https://www.youtube.com/channel/UC_vNJ1TRH9RCeMUvgNCh7vw"><img src="/theme/images/numix/youtube.png" width="35" height="35"/>
+                        <a href="https://t.me/joinchat/CYHNXEzsOFNqIBw5nht5XA"><img src="/theme/images/numix/telegram.svg" width="35" height="35"/>
+                        <a href="https://discordapp.com/channels/126885102218117120/454386037268021281"><img src="/theme/images/numix/discord.png" width="35" height="35"/>
+                </p>
+        </div>
+
+
+
+        {% block content %}
+        {% endblock %}
+        <section id="extras" >
+       
+        
+        </section><!-- /#extras -->
+	
+        <footer id="contentinfo" >
+                <address id="about" class="vcard ">
+                Proudly powered by <a href="https://getpelican.com/" target="_blank">Pelican</a>, which takes
+                great advantage of <a href="https://python.org" target="_blank">Python</a>
+		
+                </address><!-- /#about -->
+		
+
+                
+        </footer><!-- /#contentinfo -->
+
+{% include 'piwik.html' %}
+{% include 'disqus_script.html' %}
+</body>
+</html>
